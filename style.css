@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800&display=swap");
 
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100vh;
@@ -25,6 +29,7 @@ body {
   overflow-x: hidden;
   perspective: 10px;
   background-color: black;
+  animation: fade 1s ease-out;
 }
 
 .nav-logo-title {
@@ -233,6 +238,18 @@ nav a {
   background-color: #de3123;
   right: -30px;
   bottom: 2%;
+}
+
+@keyframes fade {
+  0% {
+    background-color: black;
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 
 @keyframes spin {
